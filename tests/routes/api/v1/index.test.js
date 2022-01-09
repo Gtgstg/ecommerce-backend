@@ -69,6 +69,6 @@ describe('Post list all of product Endpoints', () => {
                 maxPrice:100000
             })
         expect(res.statusCode).toEqual(200);
-        expect(res.body.msg).toEqual('SSuccessfully fetched products');
+        expect(res.body.msg).toEqual('Successfully fetched products');
     })
 })

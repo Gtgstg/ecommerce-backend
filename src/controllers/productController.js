@@ -53,6 +53,7 @@ module.exports = {
 		if (data.productId && data.userId) {
 			Product.getProductDetails(data, function (err, result) {
 				if (err) {
+					console.log(err);
 					responseData.msg = "Error in fetching product details";
 					return res.status(httpCodes.internalServerError).send(responseData);
 				}
