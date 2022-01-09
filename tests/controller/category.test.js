@@ -1,7 +1,4 @@
 const { mockRequest, mockResponse } = require('../interceptor')
-const mysql = require("mysql");
-const Config = require("../../config/config.json");
-var pool = mysql.createPool(Config.test);
 const categoryModel = require('../../src/models/category');
 const categoryController = require('../../src/controllers/categoryController');
 
