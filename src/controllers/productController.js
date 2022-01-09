@@ -31,7 +31,6 @@ module.exports = {
 		if (data.name && data.price && data.description && data.categoryId && data.vendorId) {
 			Product.addProduct(data, function (err) {
 				if (err) {
-					console.log(err)
 					responseData.msg = "Error in adding product";
 					return res.status(httpCodes.internalServerError).send(responseData);
 				}
@@ -53,7 +52,6 @@ module.exports = {
 		if (data.productId && data.userId) {
 			Product.getProductDetails(data, function (err, result) {
 				if (err) {
-					console.log(err);
 					responseData.msg = "Error in fetching product details";
 					return res.status(httpCodes.internalServerError).send(responseData);
 				}

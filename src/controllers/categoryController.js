@@ -11,7 +11,6 @@ module.exports = {
 		};
 		Category.listCategories(function (err, result) {
 			if (err) {
-				console.log(err);
 				return res.status(httpCodes.internalServerError).send(responseData);
 			}
 			responseData.success = true;

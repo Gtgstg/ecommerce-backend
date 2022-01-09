@@ -1,9 +1,7 @@
 const mysql = require("mysql");
 const Config = require("../../../../config/config.json");
 var pool = mysql.createPool(Config.test);
-const { response } = require("express");
 const jsdom = require("jsdom");
-const { JSDOM } = jsdom;
 const request = require('supertest');
 const app = require('../../../../app');
 
