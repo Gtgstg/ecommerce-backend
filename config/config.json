@@ -1,0 +1,24 @@
+{
+  "development": {
+    "username": "test",
+    "password": "",
+    "database": "ecommerce",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "test",
+    "user": "test",
+    "password": "",
+    "database": "ecommerce",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "relevel",
+    "password": "Ecommerce#2021",
+    "database": "ecommercedb",
+    "host": "relevel-ecommerce.cvyl0jb1nhb0.ap-south-1.rds.amazonaws.com",
+    "dialect": "mysql"
+  }
+}
