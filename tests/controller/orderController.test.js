@@ -273,7 +273,7 @@ describe('Order controller', () => {
 })
 
 describe('Order controller', () => {
-    it('should get orderDetails', async () => {
+    it('should fail in get orderDetails', async () => {
         const spy = jest.spyOn(orderDetailModel, 'getOrderDetails').mockImplementation((data, cb) => cb(new Error("This is an error."), null));
         const req = mockRequest();
         const res = mockResponse();
@@ -326,7 +326,7 @@ describe('Order controller', () => {
 })
 
 describe('Order controller', () => {
-    it('should get edit Details', async () => {
+    it('should fail with invalid params', async () => {
         const req = mockRequest();
         const res = mockResponse();
         
@@ -340,7 +340,7 @@ describe('Order controller', () => {
 })
 
 describe('Order controller', () => {
-    it('should get edit Details', async () => {
+    it('should fail with invalid params', async () => {
         const req = mockRequest();
         const res = mockResponse();
         req.body = {
@@ -356,7 +356,7 @@ describe('Order controller', () => {
 })
 
 describe('Order controller', () => {
-    it('should get edit Details', async () => {
+    it('should fail cornfirming payment', async () => {
         const spy = jest.spyOn(orderDetailModel, 'editOrder').mockImplementation((data, cb) => cb(new Error("This is an error."), null));
 
         const req = mockRequest();
@@ -398,7 +398,7 @@ describe('Order controller', () => {
 })
 
 describe('Order controller', () => {
-    it('should get edit Details', async () => {
+    it('should fails in updating order details', async () => {
         const spy = jest.spyOn(productModel, 'getProductDetails').mockImplementation((data, cb) => cb(new Error("This is an error."), null));
 
         const req = mockRequest();
@@ -418,7 +418,7 @@ describe('Order controller', () => {
 })
 
 describe('Order controller', () => {
-    it('should get edit Details', async () => {
+    it('should fails in updating order details due to getOrderDetails', async () => {
         const spy = jest.spyOn(productModel, 'getProductDetails').mockImplementation((data, cb) => cb(null, testDescriptionResponse));
         const getOrderSpy = jest.spyOn(orderDetailModel, 'getOrderDetails').mockImplementation((data, cb) => cb(new Error("This is an error."), null));
 
@@ -471,7 +471,7 @@ describe('Order controller', () => {
 })
 
 describe('Order controller', () => {
-    it('should get edit Details', async () => {
+    it('should fail edit Details', async () => {
         const spy = jest.spyOn(productModel, 'getProductDetails').mockImplementation((data, cb) => cb(null, testDescriptionResponse));
         const getOrderSpy = jest.spyOn(orderDetailModel, 'getOrderDetails').mockImplementation((data, cb) => cb(null, [{
             price: 1000,
@@ -535,7 +535,7 @@ describe('Order controller', () => {
 })
 
 describe('Order controller', () => {
-    it('should get edit Details', async () => {
+    it('should fail edit Details', async () => {
         const spy = jest.spyOn(productModel, 'getProductDetails').mockImplementation((data, cb) => cb(null, testDescriptionResponse));
         const getOrderSpy = jest.spyOn(orderDetailModel, 'getOrderDetails').mockImplementation((data, cb) => cb(null, [{
             price: 1000,
